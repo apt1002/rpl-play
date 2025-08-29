@@ -436,7 +436,7 @@ namespace Pcre2 {
 			Uchar* subject, size_t subject_len, size_t startoffset,
 			MatchFlags options, Match match, void *mcontext,
 			Uchar* replacement, size_t replacement_len,
-			uint8* outputbuffer, ref size_t outlength
+			Uchar* outputbuffer, ref size_t outlength
 		);
 
 		[CCode (cname = "_vala_pcre2_substitute")]
