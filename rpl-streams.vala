@@ -90,6 +90,8 @@ ssize_t replace (
 				break;
 			} else if (rc == Pcre2.Error.PARTIAL) {
 				// Need more input.
+				output.write_all (buf.data[match_from : match.group_start (0)], out num_bytes);
+				match_from = (ssize_t)match.group_start (0);
 				break;
 			} else if (rc < 0) {
 				warn (@"error in regular expression: $(Pcre2.get_error_message(rc))");
